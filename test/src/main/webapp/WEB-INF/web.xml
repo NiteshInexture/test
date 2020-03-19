@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" 
+         version="2.5" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+  <display-name>Web Application</display-name>
+    <welcome-file-list>
+	  	<welcome-file>login.jsp</welcome-file>
+	  </welcome-file-list>
+	<filter>  
+	<filter-name>f1</filter-name>  
+	<filter-class>com.filter.FilterLogin</filter-class>  
+	</filter>
+	
+	<filter-mapping>  
+	<filter-name>f1</filter-name>  
+	<url-pattern>/Login</url-pattern>  
+	</filter-mapping>
+	
+	  <servlet>
+	  	<servlet-name>Login</servlet-name>
+	  	<servlet-class>com.servlets.Login</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+	  	<servlet-name>Login</servlet-name>
+	  	<url-pattern>/Login</url-pattern>
+	  </servlet-mapping>
+	  
+	  <servlet-mapping>
+	  	<servlet-name>insert</servlet-name>
+	  	<url-pattern>/InsertUpdate</url-pattern>
+	  </servlet-mapping>
+	  <servlet-mapping>
+	  	<servlet-name>userHome</servlet-name>
+	  	<url-pattern>/UserHome</url-pattern>
+	  </servlet-mapping>
+	  <servlet-mapping>
+	  	<servlet-name>update</servlet-name>
+	  	<url-pattern>/Update</url-pattern>
+	  </servlet-mapping>
+	  <servlet-mapping>
+	  	<servlet-name>adminHome</servlet-name>
+	  	<url-pattern>/AdminHome</url-pattern>
+	  </servlet-mapping>
+	 
+	  <servlet-mapping>
+	  	<servlet-name>Edit</servlet-name>
+	  	<url-pattern>/Edit</url-pattern>
+	  </servlet-mapping>
+	  <servlet-mapping>
+	  	<servlet-name>Delete</servlet-name>
+	  	<url-pattern>/Delete</url-pattern>
+	  </servlet-mapping>
+  	  <servlet-mapping>
+	  	<servlet-name>ForgetPassword</servlet-name>
+	  	<url-pattern>/ForgetPassword</url-pattern>
+	  </servlet-mapping>
+  	  
+  <filter>  
+	<filter-name>f2</filter-name>  
+	<filter-class>com.filter.FilterRegister</filter-class>  
+	</filter>
+  	   
+	<filter-mapping>  
+	<filter-name>f2</filter-name>  
+	<url-pattern>/InsertUpdate</url-pattern>  
+	</filter-mapping>
+	
+ 	  <servlet>
+	  	<servlet-name>insert</servlet-name>
+	  	<servlet-class>com.servlets.InsertUpdate</servlet-class>
+	  </servlet>
+ 	  <servlet>
+	  	<servlet-name>userHome</servlet-name>
+	  	<servlet-class>com.servlets.UserHome</servlet-class>
+	  </servlet>
+	  <servlet>
+	  	<servlet-name>update</servlet-name>
+	  	<servlet-class>com.servlets.Update</servlet-class>
+	  </servlet>
+	  <servlet>
+	  	<servlet-name>adminHome</servlet-name>
+	  	<servlet-class>com.servlets.admin.AdminHome</servlet-class>
+	  </servlet>
+	  <servlet>
+	  	<servlet-name>Edit</servlet-name>
+	  	<servlet-class>com.servlets.admin.EditUser</servlet-class>
+	  </servlet> 
+	  <servlet>
+	  	<servlet-name>Delete</servlet-name>
+	  	<servlet-class>com.servlets.admin.Delete</servlet-class>
+	  </servlet>
+      <servlet>
+	  	<servlet-name>ForgetPassword</servlet-name>
+	  	<servlet-class>com.servlets.ForgetPassword</servlet-class>
+	  </servlet>
+</web-app>

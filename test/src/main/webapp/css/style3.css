@@ -1,0 +1,169 @@
+* {box-sizing: border-box}
+
+/* Add padding to containers */
+.container {
+  padding: 0px;
+}
+.width-100{
+  width:50%;
+}
+/* Full-width input fields */
+input[type=text], input[type=password],textarea,input[type=email],input[type=tel],input[type=date],input[type=file]{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+textarea{
+	margin-bottom: 0;
+}
+
+input[type=checkbox]{
+	margin-left: 50px;
+}
+input[type=text]:focus, input[type=password]:focus,textarea:focus,input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+input[type=radio]{
+    padding:15px;
+    margin: 5px 0 22px 50px;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+label[for=address]{
+	width:100%;
+}
+#prev-image{
+	display:none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0 100px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+input.has-error, select.has-error{
+	color : black
+}
+.has-error{
+	color:red;
+}
+
+.registerbtn1 {
+  margin: 8px 0 10px;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+/* requered */
+#req{
+    color: red;
+}
+.center-div{
+    transform: translate(50%,0);
+}
+span#addCount{
+	background: transparent;
+	border: none;
+	color: blue;
+}
+
+#rep_address  > .container-fluid{
+	padding : 0;
+}
+
+.fa-times{
+	color:red;
+}
+@media (max-width:1350px) 
+{
+    .registerbtn {padding: 16px 20px; margin: 8px 0;}
+    input[type=radio]{padding:15px;margin: 5px 0 22px 50px;}
+    input[type=text], input[type=password],textarea,input[type=email]{padding: 15px; margin: 5px 0 22px 0;}
+    label, .head{font-size: 20px;}
+    .h1{font-size: 45px;}
+    .width-100{width:50%;}
+    .center-div{width:50%;transform: translate(50%,0);}   
+}
+@media (max-width: 1200px) 
+{
+    .registerbtn {padding: 14px 18px; margin: 7px 0;}
+    input[type=radio]{padding:13px;margin: 5px 0 20px 50px;}
+    input[type=text], input[type=password],textarea,input[type=email]{padding: 13px; margin: 5px 0 20px 0;}
+    label,.head{font-size: 18px;}
+    .h1{font-size: 40px;}
+    .width-100{width:50%;}
+    .center-div{left:-20%; width:vh;transform: translate(50%,0);}
+}
+@media (max-width: 991px) 
+{
+    .registerbtn {padding: 12px 16px; margin: 6px 0;}
+    input[type=radio]{padding:11x;margin: 4px 0 18px 50px;}
+    input[type=text], input[type=password],textarea,input[type=email]{padding: 11px; margin: 4px 0 18px 0;}
+    label,.head{font-size: 16px;}
+    .h1{font-size: 35px;}
+    .width-100{width:50%; }
+    .center-div{width:70%;transform: translate(22%,0);}
+}
+@media (max-width: 768px) 
+{
+    .registerbtn {padding: 10px 14px; margin: 5px 0 100px 0;}
+    input[type=radio]{padding:9px;margin: 4px 0 16px 50px;}
+    input[type=text], input[type=password],textarea,input[type=email]{padding: 9px; margin: 4px 0 16px 0;}
+    label,.head{font-size: 14px;}
+    .h1{font-size: 30px;}
+    .width-100{width:50%;}
+    .center-div{left:0;width: 80%;transform: translate(20%,0);}
+}
+@media (max-width: 600px) 
+{
+    .registerbtn {padding: 8px 12px; margin: 4px 3px 100px;}
+    input[type=radio]{padding:7px;margin: 3px 0 14px 50px;}
+    input[type=text], input[type=password],textarea,input[type=email]{padding: 7px; margin: 3px 0 14px 0;}
+    label,.head{font-size: 12px;}
+    .h1{font-size: 25px;}
+    .width-100{width:50%;}
+    .center-div{left:0;width:90%;transform: translate(10%,0);}
+}
+@media (max-width: 480px) 
+{
+    .registerbtn {padding: 6px 10px; margin: 3px 3px 100px;}
+    input[type=radio]{padding:5px;margin: 3px 0 12px 50px;}
+    input[type=text], input[type=password],textarea,input[type=email]{padding:5px; margin: 3px 0 12px 0;}
+    label,.head{font-size: 10px;}
+    .h1{font-size: 20px;}
+    .width-100{width:50%;}
+    .center-div{left:0;width:100%;transform: translate(0%,0);}
+}
