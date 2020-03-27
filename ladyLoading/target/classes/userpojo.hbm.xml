@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 5.3//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">  
+
+<hibernate-mapping>
+	 <class name="com.pojo.User" table="lasyuser" >  
+	    <id name="uid">  
+	     <generator class="increment"></generator>  
+	    </id>  
+	    <property name="name"></property>
+	    <bag name = "list" cascade="all">
+         <key column = "uid"/>
+         <one-to-many class="com.pojo.Address"/>
+      	</bag>
+	 </class>
+	 <class name="com.pojo.Address" table="lasyaddress" >  
+	    <id name = "id" type = "int" column = "id">
+         <generator class="native"/>
+      	</id> 
+	    <property name="address"></property>
+	 </class>
+	 
+</hibernate-mapping>

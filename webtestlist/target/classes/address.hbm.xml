@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 5.3//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">  
+
+<hibernate-mapping>
+	 <class name="com.pojo.AddressPojo" table="joinaddress" >  
+	    
+	  <meta attribute = "class-description">
+         This class contains the address detail.
+         with list
+      </meta>
+	    
+	    
+	    <id name="aid">  
+	     <generator class="native"></generator>  
+	    </id>  
+	
+	    <property name="city"></property>
+	    <property name="state"></property>  
+	 </class>  
+</hibernate-mapping>

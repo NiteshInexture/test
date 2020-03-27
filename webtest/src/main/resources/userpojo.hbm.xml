@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 5.3//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">  
+
+<hibernate-mapping>
+	 <class name="com.pojo.UserPojo" table="user" >  
+	    
+	  <meta attribute = "class-description">
+         This class contains the User detail.
+         Table perClass hierarchy single level inheritance 
+      </meta>
+	    
+	    
+	    <id name="id">  
+	     <generator class="increment"></generator>  
+	    </id>  
+	
+	    <discriminator column="firstName" type="string"></discriminator>   
+	    <property name="lastName"></property>  
+	    
+	    <subclass name="com.pojo.AddressPojo" discriminator-value="from subClass">  
+			<property name="city"></property>  
+			<property name="state"></property>  
+		</subclass>  
+	 </class>  
+            
+</hibernate-mapping>

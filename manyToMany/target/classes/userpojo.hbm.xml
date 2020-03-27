@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 5.3//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">  
+
+<hibernate-mapping>
+	 <class name="com.pojo.UserPojo" table="many_to_many_user" >  
+	    
+		  <meta attribute = "class-description">
+	         This class contains the User detail.
+	         with list
+	      </meta>
+	      
+    	<id name="uid">  
+	     <generator class="native"></generator>  
+	    </id>  
+	    
+	    <property name="firstName"></property>
+	    <property name="lastName"></property> 
+	      <set name = "address" cascade="all" table="many_to_many_useraddress">
+	         <key column = "uid"/>
+	         <many-to-many column = "aid" class="com.pojo.AddressPojo"/>
+	      </set>
+	 </class>
+	 
+	  <class name="com.pojo.AddressPojo" table="many_to_many_address">
+		  <meta attribute = "class-description">
+	         This class contains the address detail.
+	         with list
+	      </meta>
+	    <id name="aid">  
+	     <generator class="increment"></generator>  
+	    </id>  
+	
+	    <property name="city"></property>
+	    <property name="state"></property>  
+	 </class>  
+</hibernate-mapping>
